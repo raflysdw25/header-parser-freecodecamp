@@ -23,7 +23,7 @@ app.get("/", function (req, res) {
 app.get("/api/whoiam", function (req, res) {
   res.json({
     ipaddress: req.ip,
-    software: req.headers("User-Agent"),
+    software: req.get("User-Agent"),
     language: req.get("Accept-Language"),
   });
 });
